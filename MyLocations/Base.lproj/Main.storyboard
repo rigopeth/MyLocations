@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -396,6 +397,7 @@
                     <connections>
                         <segue destination="Vll-ge-wCV" kind="relationship" relationship="viewControllers" id="gTb-bW-kXM"/>
                         <segue destination="PTs-Dy-w16" kind="relationship" relationship="viewControllers" id="TRN-yj-Io5"/>
+                        <segue destination="5lu-TX-AV3" kind="relationship" relationship="viewControllers" id="0Ud-al-5O7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpT-ZA-kup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -475,6 +477,52 @@
             </objects>
             <point key="canvasLocation" x="1689" y="884"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="lnY-FU-12s">
+            <objects>
+                <viewController id="eGI-ge-Ky2" customClass="MapViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JGL-xM-E50">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Sx-Jp-sSd">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eGI-ge-Ky2" id="Ggx-5O-ssU"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q2f-Vp-vSq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Sx-Jp-sSd" firstAttribute="centerX" secondItem="JGL-xM-E50" secondAttribute="centerX" id="5DU-ky-VPJ"/>
+                            <constraint firstItem="1Sx-Jp-sSd" firstAttribute="leading" secondItem="q2f-Vp-vSq" secondAttribute="leading" id="VME-ZB-2la"/>
+                            <constraint firstItem="1Sx-Jp-sSd" firstAttribute="top" secondItem="q2f-Vp-vSq" secondAttribute="top" id="f1f-fQ-zSl"/>
+                            <constraint firstItem="1Sx-Jp-sSd" firstAttribute="bottom" secondItem="q2f-Vp-vSq" secondAttribute="bottom" id="skU-X7-tst"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="s8v-r6-GmD">
+                        <barButtonItem key="leftBarButtonItem" title="Locations" id="qB2-uw-V0g">
+                            <connections>
+                                <action selector="showLocations" destination="eGI-ge-Ky2" id="BkC-o7-lAS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="User" id="gMa-sM-rfA">
+                            <connections>
+                                <action selector="showUser" destination="eGI-ge-Ky2" id="47G-f5-ewr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="1Sx-Jp-sSd" id="gfR-Aa-5Ca"/>
+                        <segue destination="vX8-NO-8iK" kind="show" identifier="EditLocation" id="W7R-29-V1O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wal-pa-vwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3672.8000000000002" y="883.80809595202402"/>
+        </scene>
         <!--Locations-->
         <scene sceneID="2ms-cN-2ms">
             <objects>
@@ -492,9 +540,28 @@
             </objects>
             <point key="canvasLocation" x="148" y="884"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="lAY-XH-YlZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5lu-TX-AV3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="g6i-z6-BrX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DT1-i4-7Hs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eGI-ge-Ky2" kind="relationship" relationship="rootViewController" id="ZRf-cr-rwc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWz-rZ-QFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2733.5999999999999" y="883.80809595202402"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rij-RT-YZm"/>
+        <segue reference="W7R-29-V1O"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
