@@ -13,6 +13,8 @@
 		078BAC2C29918ED0004E6799 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078BAC2A29918ED0004E6799 /* Location+CoreDataClass.swift */; };
 		078BAC2D29918ED0004E6799 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078BAC2B29918ED0004E6799 /* Location+CoreDataProperties.swift */; };
 		079DE03C29AD7D9F00BE3953 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079DE03B29AD7D9F00BE3953 /* UIImage+Resize.swift */; };
+		079DE03E29ADB2DF00BE3953 /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079DE03D29ADB2DF00BE3953 /* String+AddText.swift */; };
+		07FFBDFA29B7EC69000B998E /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07FFBDF929B7EC69000B998E /* Sound.caf */; };
 		7E3870822925BF3300727729 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3870812925BF3300727729 /* LocationDetailsViewController.swift */; };
 		7E520921292734F20047BE11 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E520920292734F10047BE11 /* CategoryPickerViewController.swift */; };
 		7E6D6078291EECEB00DC5F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D6077291EECEB00DC5F29 /* AppDelegate.swift */; };
@@ -33,6 +35,8 @@
 		078BAC2A29918ED0004E6799 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		078BAC2B29918ED0004E6799 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		079DE03B29AD7D9F00BE3953 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		079DE03D29ADB2DF00BE3953 /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
+		07FFBDF929B7EC69000B998E /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
 		7E3870812925BF3300727729 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		7E520920292734F10047BE11 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		7E6D6074291EECEB00DC5F29 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07FFBDF829B7EC69000B998E /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				07FFBDF929B7EC69000B998E /* Sound.caf */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		7E6D606B291EECEA00DC5F29 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +90,7 @@
 		7E6D6076291EECEB00DC5F29 /* MyLocations */ = {
 			isa = PBXGroup;
 			children = (
+				07FFBDF829B7EC69000B998E /* Sound */,
 				7E6D6077291EECEB00DC5F29 /* AppDelegate.swift */,
 				7E6D6083291EED0500DC5F29 /* Assets.xcassets */,
 				7E520920292734F10047BE11 /* CategoryPickerViewController.swift */,
@@ -96,6 +109,7 @@
 				07520260299303C800DE0936 /* LocationCell.swift */,
 				075AC34D29960E05000908B0 /* MapViewController.swift */,
 				079DE03B29AD7D9F00BE3953 /* UIImage+Resize.swift */,
+				079DE03D29ADB2DF00BE3953 /* String+AddText.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -160,6 +174,7 @@
 			files = (
 				7E6D6087291EED0500DC5F29 /* LaunchScreen.storyboard in Resources */,
 				7E6D6084291EED0500DC5F29 /* Assets.xcassets in Resources */,
+				07FFBDFA29B7EC69000B998E /* Sound.caf in Resources */,
 				7E6D607F291EECEB00DC5F29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +198,7 @@
 				7E6D6082291EECEB00DC5F29 /* MyLocations.xcdatamodeld in Sources */,
 				7E6D607A291EECEB00DC5F29 /* SceneDelegate.swift in Sources */,
 				078BAC2C29918ED0004E6799 /* Location+CoreDataClass.swift in Sources */,
+				079DE03E29ADB2DF00BE3953 /* String+AddText.swift in Sources */,
 				7EB23EF0292E97EA003BD74A /* HudView.swift in Sources */,
 				7E3870822925BF3300727729 /* LocationDetailsViewController.swift in Sources */,
 			);
@@ -341,9 +357,11 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "location-services";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,9 +393,11 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "location-services";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
